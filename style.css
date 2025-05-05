@@ -295,16 +295,15 @@ header.sticky {
         top: 100%;
         right: -100%;
         width: 300px;
-        /* Change height to fit screen */
-        height: 100vh;
-        overflow-y: auto; /* allows scrolling if content is long */
+        height: 100vh; /* fits the screen */
+        overflow-y: auto; /* allows vertical scrolling */
         background: #edfff1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 100px 30px 30px 30px; /* top padding can be reduced */
+        padding: 100px 30px 30px; /* adjusted top padding */
         transition: all .42s ease;
-        z-index: 999; /* ensure it appears above other content */
+        z-index: 999;
     }
 
     .navmenu a {
@@ -316,6 +315,7 @@ header.sticky {
         right: 0;
     }
 }
+
 
 
 .second-info a {
