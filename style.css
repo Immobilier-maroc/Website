@@ -28,6 +28,10 @@ header {
 
 .navmenu {
     display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping */
+    align-items: center;
 }
 
 .navmenu a {
@@ -37,6 +41,7 @@ header {
     padding: 10px 20px;
     font-weight: bolder;
     transition: all .42s ease;
+    white-space: nowrap; /* Prevents wrapping for each item */
 }
 
 .navmenu a:hover {
@@ -163,7 +168,6 @@ header.sticky {
 }
 
 /* New-section-css */
-
 .new-products-title h2 {
     color: #111;
     font-size: 28px;
@@ -301,13 +305,13 @@ header.sticky {
         top: 100%;
         right: -100%;
         width: 300px;
-        height: 100vh; /* fits the screen */
-        overflow-y: auto; /* allows vertical scrolling */
+        height: 100vh; /* Full height of the viewport */
+        overflow-y: auto; /* Enables vertical scroll */
         background: #edfff1;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
-        padding: 100px 30px 30px; /* adjusted top padding */
+        padding: 100px 30px 30px;
         transition: all .42s ease;
         z-index: 999;
     }
@@ -315,12 +319,12 @@ header.sticky {
     .navmenu a {
         display: block;
         margin: 18px 0;
+        white-space: nowrap;
     }
 
     .navmenu.open {
         right: 0;
     }
-
     /* Adjust background position for small devices */
     .main-home {
         background-position: 20% center; /* Slightly shift background to the left */
